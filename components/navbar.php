@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link href="./dist/output.css" rel="stylesheet">
-    <title>Navbar</title>
 </head>
-<body>
+<body class="z-50">
     <?php
         $isIncludedInAboutUs = (basename($_SERVER['PHP_SELF']) === 'aboutus.php' || basename($_SERVER['PHP_SELF']) === 'result.php');
     ?>
-    <nav class="p-2 shadow-md fixed w-full <?php echo $isIncludedInAboutUs ? 'bg-[#ffc599] bg-opacity-70' : ''; ?> md:p-5 md:py-0 md:flex md:items-center md:justify-between">
+    <nav class="p-2 shadow-md fixed w-full h-24 z-50 bg-[#b9b9b8] <?php echo $isIncludedInAboutUs ? 'bg-[#ffc599] bg-opacity-70' : ''; ?> md:p-5 md:py-0 md:flex md:items-center md:justify-between">
         <div class="flex justify-between items-center ml-10">
-            <a href="/Appdev/index.php"><img src="/Appdev/img/untangled1.png" alt="Untangled" class="w-[30%] h-[30%] md:w-[30%] md:h-[15%]"></a>
+            <a href="/Appdev/index.php"><img src="/Appdev/img/untangled1.png" alt="Untangled" class="w-[20%]"></a>
             
             <span class="text-xl cursor-pointer mx-5 transition duration-100 text-black hover:text-white md:hidden block">
                 <ion-icon name="grid-outline" onclick="Menu(this)"></ion-icon>
             </span>
         </div>
         <ul class="text-xs text-center font-bold mt-0 mr-4 right-7 grid gap-y-4 z-[40] absolute rounded-3xl p-5 opacity-0 top-[-400px] transition-all ease-in duration-500 md:text-lg md:flex md:mt-0 md:items-center md:flex-row md:gap-x-10 md:z-auto md:static md:w-auto md:opacity-100">
-            <li><a href="/Appdev/index.php" class="hover:text-[#B8764B] duration-500 md:hover:text-[#B8764B] button">Home</a></li>
+            <li><a href="/Appdev/index.php" class="hover:text-[#b0aaa6] duration-500 md:hover:text-[#B8764B] button">Home</a></li>
             <li><a href="/Appdev/components/aboutus.php" class="hover:text-[#B8764B] duration-500 md:hover:text-[#B8764B] button">About us</a></li> 
-            <!-- <li><a href="contact.php" class="hover:text-[#B8764B] duration-500 md:hover:text-[#B8764B] button">Contact us</a></li> -->
-            <button class="shadow-[#B8764B] p-2 rounded-2xl hover:scale-125 duration-300 text-[#B8764B] hover:text-[#DAC5B7]"><a href="/Appdev/components/login.php">Admin</a></button>
+            <button class="hover:text-[#B8764B] duration-500 md:hover:text-[#B8764B] button"><a href="/Appdev/components/login.php">Admin</a></button>
         </ul>
     </nav>
 

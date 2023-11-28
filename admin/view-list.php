@@ -66,7 +66,6 @@ if (isset($_GET['update-success']) || isset($_GET['delete-success'])):
                                 echo '<td class="px-4 py-2 border border-gray-700">' . ucfirst(strtolower($user['depression_level'])) . '</td>';
                                 echo '<td class="px-4 py-2 border border-gray-700 text-right">';
                                 echo '<a href="view.php?id=' . $user['id'] . '" class="text-blue-500 hover:underline mr-2">View</a>';
-                                echo '<a href="../php/user-controller.php?id=' . $user['id'] . '&action=edit" class="text-yellow-500 hover:underline mr-2">Edit</a>';
                                 echo '<a href="../php/user-controller.php?id=' . $user['id'] . '&action=delete" class="text-red-500 hover:underline">Delete</a>';
                                 echo '</td>';
                                 echo '</tr>';

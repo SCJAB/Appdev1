@@ -13,7 +13,7 @@
         include '../components/navbar.php';
     ?>
     <div class="h-screen flex items-center justify-center md:grid md:grid-cols-2 md:gap-4">
-        <h1 class="absolute text-white text-xl font-bold md:text-3xl top-52 md:top-64 left-10 fade-in">About Us</h1>
+        <h1 class="absolute text-white text-xl font-bold md:text-3xl top-52 left-10 fade-in">About Us</h1>
         <div class="bg-black bg-opacity-50 text-white p-4 rounded-lg shadow-lg shadow-black md:ml-10 fade-in">
             <p class="text-xs md:text-base text-justify ">Welcome to Untangled, your space for understanding and improving your mental health. Our platform offers a simple and anonymous questionnaire to help you gain insights into your emotional well-being. Whether you choose to stay anonymous or share your information, we're here to support you on your path to a healthier, happier you. <br><br>We believe in the power of self-discovery and are dedicated to helping you untangle your thoughts. Your mental health matters, and Untangled is your companion on the journey to emotional well-being.</p>
         </div>

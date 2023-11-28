@@ -15,13 +15,6 @@ class UserController {
         header("location: ../admin?page=list&delete-$destination=true");
     }
 
-    public function updateUser($id, $first_name, $last_name, $age, $email, $score, $depression_level) {
-        $userModel = new UserModel();
-        $success = $userModel->updateUser($id, $first_name, $last_name, $age, $email, $score, $depression_level);
-        $destination = $success ? 'success' : 'failed';
-        header("location: ../admin?page=list&update-$destination=true");
-    }
-
     public function createUser($type, $first_name, $last_name, $email, $age, $total_score) {
         $user = UserFactory::getDetails($type, $first_name, $last_name, $email, $age, $total_score);
 
@@ -54,9 +47,6 @@ function handleRequest() {
     $controller = new UserController();
 
     switch ($action) {
-        case 'edit':
-            redirectToEdit($id);
-            break;
         case 'update':
             handleUpdate($controller);
             break;

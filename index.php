@@ -11,19 +11,20 @@ session_destroy();
     <link rel="stylesheet" href="./dist/output.css">
     <title>Home</title>
 </head>
-<body class="h-screen">
+<body class="bg-[#b9b9b8] z-0">
     <?php 
         include './components/navbar.php';
     ?>
 
-    <div class="w-full h-screen bg-image flex flex-col justify-center">
+    <div class="w-full h-screen bg-image flex flex-col justify-center z-0 fade-in">
         <div class="mx-5 md:mx-none fade-in">
-            <div class="md:mb-44 md:pb-10 md:ml-24">
-                <h1 class="md:text-4xl font-bold italic bg-clip-text text-transparent bg-gradient-to-l from-slate-600 to-[#864A27]">"Depression is being colorblind and constantly <br class="hidden md:block">told how colorful the world is." <span class="text-xs md:text-lg text-slate-100 font-bold"><br>- Atticus Poetry</span></h1>
+            <div class="md:mb-20 md:pb-10 md:ml-[2.75rem] fade-in">
+                <h1 class="md:text-5xl max-w-[38rem] mt-40 font-bold bg-clip-text text-transparent bg-gradient-to-l from-yellow-600 to-[#864A27] mb-10">If you feel comfortable, you can take our depression test to know more about yourself.</h1>
+                <a href="./components/visibility.php" class="md:text-3xl bg-yellow-700 text-white font-bold py-2 px-4 rounded">Get Started</a>
             </div>
-            <div class="md:items-start">
-                <p class="md:text-lg font-semibold md:ml-24 md:mb-5 text-[#99562C]">Begin Your Journey to Understanding <br>Your Mental Health.</p>
-                <a href="./components/visibility.php" class="button font-bold text-black hover:text-[#99562C] md:ml-24 md:text-3xl">Get Started</a>
+            <div class="md:items-start md:ml-[2.75rem] fade-in">
+                <p class="md:text-lg font-semibold md:mb-5 text-[#99562C] italic">Depression is being colorblind and constantly <br class="hidden md:block">told how colorful the world is." </p>
+                <p class="text-xs md:text-lg text-[#864A27] font-bold">-Atticus Poetry </p>
             </div>
         </div>
     </div>
@@ -34,10 +35,9 @@ session_destroy();
 
     <style>
         .bg-image {
-            background-image: url('./img/gloom1.jpg');
+            background-image: url('./img/gloom2.png');
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-position:370px;
             background-repeat: no-repeat;
         }
         .fade-in {

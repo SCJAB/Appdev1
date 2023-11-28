@@ -26,22 +26,6 @@ class UserModel {
         }
     }
 
-    public function updateUser($id, $first_name, $last_name, $age, $email, $score, $depression_level) {
-        try {
-            $sql = "UPDATE users SET first_name = ?, last_name = ?, age = ?, email = ?, total_score = ?, depression_level = ? WHERE id = ?";
-            $stmt = $this->conn->prepare($sql);
-            $stmt->bind_param("ssisssi", $first_name, $last_name, $age, $email, $score, $depression_level, $id);
-    
-            $success = $stmt->execute();
-            $stmt->close();
-            
-            return $success;
-        } catch (Exception $e) {
-            error_log("An error occurred: " . $e->getMessage());
-            return false;
-        }
-    }
-
     public function createUser($user) {
         try {
             $stmt = $this->conn->prepare("INSERT INTO users (first_name, last_name, age, email, total_score, depression_level) VALUES (?,?,?,?,?,?)");
