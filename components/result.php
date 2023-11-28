@@ -64,7 +64,11 @@ if (isset($_GET['visibility']) && $_GET['visibility'] == 'private') {
                     
                     <div class="mt-10 p-4 w-1/2 text-xs bg-white bg-opacity-20 rounded-xl md:w-6/12">
                         <h2 class="text-center md:text-base">Would you like a copy of your result?</h2>
-                        <div class="flex justify-center"><button class="text-[#ffc599] font-bold md:text-lg hover:text-green-400 duration-500" onclick="openModal()">Input Email</button></div>
+                        <?php if (isset($_GET['visibility']) && $_GET['visibility'] == 'private') { ?> 
+                            <div class="flex justify-center"><button class="text-[#ffc599] font-bold md:text-lg hover:text-green-400 duration-500" onclick="openModal()">Input Email</button></div>
+                        <?php } elseif (isset($_GET['visibility']) && $_GET['visibility'] == 'public') { ?>
+                            <div class="flex justify-center"><button class="text-[#ffc599] font-bold md:text-lg hover:text-green-400 duration-500" onclick="openModal()">Send Email</button></div>
+                        <?php } ?>
                         <div id="myModal" class="modal">
                             <div class="w-56 p-4 mt-64 mx-auto bg-[#99572C] rounded-xl md:w-3/12 md:p-10 md:mt-96 fade-in">
                                 <?php if (isset($_GET['visibility']) && $_GET['visibility'] == 'private') { ?>
@@ -75,7 +79,8 @@ if (isset($_GET['visibility']) && $_GET['visibility'] == 'private') {
                                     </form>
                                     <button class="text-slate-300 float-right md:text-base md:font-semibold hover:text-red-500 duration-500" onclick="closeModal()">Close</button>
                                 <?php } elseif (isset($_GET['visibility']) && $_GET['visibility'] == 'public') { ?>
-                                <a href="../php/email-send.php">Send Email</a><br />
+                                <a href="../php/email-send.php" class="mt-4 font-semibold md:text-lg md:font-bold hover:text-green-400 duration-500">Send Email</a><br />
+                                <button class="text-slate-300 float-right md:text-base md:font-semibold hover:text-red-500 duration-500" onclick="closeModal()">Close</button>
                                 <?php } ?>
                             </div>
                         </div>
