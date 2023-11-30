@@ -16,3 +16,4 @@ $stmt->close();
 $conn->close();
 
 header("location: ../admin");
+?>

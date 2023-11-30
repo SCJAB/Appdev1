@@ -47,9 +47,6 @@ function handleRequest() {
     $controller = new UserController();
 
     switch ($action) {
-        case 'update':
-            handleUpdate($controller);
-            break;
         case 'create':
             handleCreate($controller);
             break;

@@ -87,7 +87,7 @@
         // Set a timeout to change the color
         setTimeout(() => {
         validator.classList.add('hidden');
-        }, 1500);
+        }, 5000);
     </script>
 </body>
 </html>

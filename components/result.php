@@ -10,6 +10,7 @@ $age = $user['age'];
 $email = $user['email'];
 $totalScore = $user['totalScore'];
 $depressionLevel = $user['depressionLevel'];
+$_SESSION['depression_level'] = $depressionLevel;
 
 if (isset($_GET['visibility']) && $_GET['visibility'] == 'private') {
     if (isset($_POST['email'])) {

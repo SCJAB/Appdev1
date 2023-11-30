@@ -36,10 +36,11 @@ try {
     </head>
     <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; padding: 20px;">
         <div style="max-width: 600px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 8px;">
-            <h2 style="color: #007bff;">Dear ' . htmlspecialchars($_SESSION['firstname']) . ' ' . htmlspecialchars($_SESSION['lastname']) . ',</h2>
+            <h2 style="color: #007bff;">Dear User ' . htmlspecialchars($_SESSION['firstname']) . ' ' . htmlspecialchars($_SESSION['lastname']) . ',</h2>
             <p>We hope this message finds you well.</p>
             <p>As part of your recent assessment, we wanted to provide you with your depression score and some guidance based on your results.</p>
             <p>Your depression score is: <strong>' . htmlspecialchars($_SESSION['totalScore']) . '</strong></p>
+            <p>Your depression level is: <strong>' . htmlspecialchars($_SESSION['depression_level']) . '</strong></p>
             <p>Please remember that these scores are indicators and not definitive measures. It\'s essential to interpret them in context and seek professional advice or support if needed.</p>
             <p>Remember, taking steps towards mental well-being is a courageous journey, and seeking assistance when necessary is a commendable choice. Should you wish to discuss your results or seek further guidance, please don\'t hesitate to reach out.</p>
             <p>Wishing you the best in your journey to well-being.</p>
